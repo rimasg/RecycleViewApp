@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="data" type="com.sid.recycleviewapp.dummy.EmptyContent.DummyItem"/>
+        <variable name="clickHandler" type="com.sid.recycleviewapp.ClickHandler"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickHandler.onClick(data)}"
+        android:longClickable="true"
+        android:onLongClick="@{(v) -> clickHandler.onLongClick(v)}"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/id"
+            android:text="@{data.id}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem"/>
+
+        <TextView
+            android:id="@+id/content"
+            android:text="@{data.content}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textAppearance="?attr/textAppearanceListItem"/>
+    </LinearLayout>
+</layout>
