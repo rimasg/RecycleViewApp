@@ -7,9 +7,9 @@
         <variable name="clickHandler" type="com.sid.recycleviewapp.ClickHandler"/>
     </data>
     <LinearLayout
+        android:id="@+id/list_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="@{() -> clickHandler.onClick(data)}"
         android:longClickable="true"
         android:onLongClick="@{(v) -> clickHandler.onLongClick(v)}"
         android:orientation="horizontal">

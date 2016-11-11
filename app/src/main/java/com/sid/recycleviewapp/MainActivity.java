@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity implements ItemFragment.OnLi
     }
 
     @Override
-    public void onListFragmentInteraction(EmptyContent.DummyItem item, ItemRecyclerViewAdapter.ViewHolder holder) {
+    public void onListFragmentInteraction(EmptyContent.DummyItem item, View view) {
         final Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.VIEW_DETAILED_TEXT, item.content);
 
         final ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(this,
-                new Pair<View, String>(holder.mContentView, DetailActivity.VIEW_DETAILED_TEXT));
+                new Pair<View, String>(view, DetailActivity.VIEW_DETAILED_TEXT));
         ActivityCompat.startActivity(this, intent, activityOptions.toBundle());
     }
 }
