@@ -21,4 +21,12 @@
         android:layout_height="wrap_content"
         tools:text="Detailed Text"/>
 
+    <ImageView
+        android:id="@+id/detailed_image"
+        android:src="@drawable/ic_action_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailed_text"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>
